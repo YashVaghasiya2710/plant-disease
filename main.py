@@ -4,12 +4,15 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
+import tensorflow_hub as hub
+
 print(tf.__version__)
 app = FastAPI()
 
 # Load the SavedModel as a TFSMLayer
-MODEL = tf.saved_model.load("C:/Users/Yash/OneDrive/Desktop/code/plant-disease/models/6")
-class_names = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
+MODEL = hub.load("C:/Users/Yash/OneDrive/Desktop/code/plant-disease/models/6")
+class_names = ['Pepper__bell___Bacterial_spot', 'Pepper__bell___healthy']
+
 
 @app.get("/ping")
 async def ping():

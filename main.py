@@ -4,13 +4,12 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-import tensorflow_hub as hub
 
 print(tf.__version__)
 app = FastAPI()
 
 # Load the SavedModel as a TFSMLayer
-MODEL = hub.load("C:/Users/Yash/OneDrive/Desktop/code/plant-disease/models/6/saved_model")
+MODEL = tf.saved_model.load("C:/Users/Yash/OneDrive/Desktop/code/plant-disease/models/6/saved_model", tags=None, options=None)
 class_names = ['Pepper__bell___Bacterial_spot', 'Pepper__bell___healthy']
 
 

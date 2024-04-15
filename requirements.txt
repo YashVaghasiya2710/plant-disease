@@ -2,6 +2,6 @@ fastapi
 uvicorn
 pillow
 numpy
-tensorflow 2.10.1
+tensorflow
 python-multipart
 gunicorn

@@ -1,0 +1,6 @@
+services:
+- type: web
+  name: potato
+  runtime: python
+  repo: https://github.com/YashVaghasiya2710/potato
+  plan: free

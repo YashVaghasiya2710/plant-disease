@@ -3,6 +3,5 @@ uvicorn
 pillow
 numpy
 tensorflow
-tensorflow_hub
 python-multipart
 gunicorn
